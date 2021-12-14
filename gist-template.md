@@ -17,6 +17,7 @@ It will match the following example emails, as well as many others meeting the r
 ```
 stephen_king@author.com
 e.dickinson1886@poet.net
+4455666.me@mine.edu
 ```
 
 ## Table of Contents
