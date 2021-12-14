@@ -1,6 +1,6 @@
-# Email Searching with RegEx
+# Email Searching with Regular Expressions
 
-Regular Expressions, known as RegEx, is a tool common to many programming languages that allows defineable search and replacements in text. In JavaScript, regular expressions are considered objects. Using regex capabilities, it is easier to identify emails in data strings.
+Regular Expressions, known as regex, is a tool common to many programming languages that allows defineable search and replacements in text. In JavaScript, regular expressions are considered objects. Using regex capabilities, it is easier to identify emails in data strings.
 
 ## Summary
 
@@ -10,7 +10,7 @@ This gist will discuss, explain, and provide examples for the regex code
  /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
 ```
 
-that is used to match email address patterns within a string in JavaScript programming.
+that is used to match email address patterns within a string.
 
 It will match the following example emails, as well as many others meeting the regex specifications:
 
