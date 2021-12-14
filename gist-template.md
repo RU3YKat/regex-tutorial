@@ -1,10 +1,23 @@
-# Title (replace with your title)
+# Email Searching with RegEx
 
-Introductory paragraph (replace this with your text)
+Regular Expressions, known as RegEx, is a tool common to many programming languages that allows defineable search and replacements in text. In JavaScript, regular expressions are considered objects. Using regex capabilities, it is easier to identify emails in data strings.
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+This gist will discuss, explain, and provide examples for the regex code
+
+```
+ /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+```
+
+that is used to match email address patterns within a string in JavaScript programming.
+
+It will match the following example emails, as well as many others meeting the regex specifications:
+
+```
+stephen_king@author.com
+e.dickinson1886@poet.net
+```
 
 ## Table of Contents
 
@@ -22,28 +35,15 @@ Briefly summarize the regex you will be describing and what you will explain. In
 
 ## Regex Components
 
+First, note that a `\` is an escape character, meaning the character immediately following is a literal character, not metacharacter, unless it represents an existing regex component. Slashes `/` denote to JavaScript that the characters are regex metacharacters.
+
 ### Anchors
 
-### Quantifiers
+Anchors are regex tokens that aren't used to match certain characters, but instead specify (or assert) something about the string in question. An anchor is used to assert where the matching characters will be matched, e.g. the beginning or the end of the string.
 
-### OR Operator
+`^` denotes the start of a string, or the start of a line, generally. The regex above uses `^` to denote the start of the email string to match.
+`$` denotes the end of a string, of end of a line, generally. The regex above uses `?` to denote the end of the email string to match.
 
-### Character Classes
+```
 
-### Flags
-
-### Grouping and Capturing
-
-### Bracket Expressions
-
-### Greedy and Lazy Match
-
-### Boundaries
-
-### Back-references
-
-### Look-ahead and Look-behind
-
-## Author
-
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+```
