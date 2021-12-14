@@ -51,7 +51,7 @@ Quantifiers denote how many times the specified group of characters must be repe
 
 `+` denotes the character group specified must repeat 1 or more times.
 
-The regex above uses `+` to denote the character string represented and contained by:
+The regex above uses `+` to denote the character string represented and contained by:<br>
 `[`
 
 - the range a-z (case specific) and the range 0-9,
@@ -73,7 +73,7 @@ The OR operator `|` is not represented in the regex above, but represents possib
 
 A character class is represented by the opening and closing brackets, `[]`. They indicate a match to made with any of the enclosed characters.
 
-The regex above uses `[]` to denote the character class including:
+The regex above uses `[]` to denote the character class including:<br>
 `[`
 
 - the range a-z (case specific) and the range 0-9,
@@ -87,28 +87,28 @@ The regex above uses `[]` to denote the character class including:
 
 Although they are not applied in the email regex, forward slashes `/`, denote a pattern that can optionally be followed by flags. Seven flags are currently used in JavaScript regex, all reprsenting a boolean `true` for their respective specifications:
 
-`/d` or hasIndices flag, follows the regex start and end specifications for a capture group. It indicates a match of the capture group.
-`/g` or global property flag, tests all possible matches in a string.
-`/i` or ignoreCase flag, where cases are ignored in a string.
-`/m` or multiline flag, where the start `^` and end `$` can match the start and end of any line within the string.
-`/s` or dotAll flag, where all Unicode indicating any line terminator is accepted.
-`/u` or Unicode flag, accepting any Unicode code point escapes as such.
-`/y` or sticky flag, where only the matched index is the first incidence. This flag takes precedence over any global designations.
+`/d` or hasIndices flag, follows the regex start and end specifications for a capture group. It indicates a match of the capture group.<br>
+`/g` or global property flag, tests all possible matches in a string.<br>
+`/i` or ignoreCase flag, where cases are ignored in a string.<br>
+`/m` or multiline flag, where the start `^` and end `$` can match the start and end of any line within the string.<br>
+`/s` or dotAll flag, where all Unicode indicating any line terminator is accepted.<br>
+`/u` or Unicode flag, accepting any Unicode code point escapes as such.<br>
+`/y` or sticky flag, where only the matched index is the first incidence. This flag takes precedence over any global designations.<br>
 
 ### Grouping and Capturing
 
 Defined by the use of parentheses `()`, which contain a group that is to be matched and remembered, or captured.
 
-The above regex captures three groups, the first `([a-z0-9_\.-]+)` represents the matchable username characters, the second `([\da-z\.-]+)` represents the matchable domain characters, the third `([a-z\.]{2,6})` represents the matchable domain extension characters.
+The above regex captures three groups,<br>the first `([a-z0-9_\.-]+)` represents the matchable username characters,<br>the second `([\da-z\.-]+)` represents the matchable domain characters,<br>the third `([a-z\.]{2,6})` represents the matchable domain extension characters.
 
 ### Bracket Expressions
 
-Specifications for characters denoted within brackets, `[]` are defined for a single character selection.
-The regex above defines the three bracket expressions:
+Specifications for characters denoted within brackets, `[]` are defined for a single character selection.<br>
+The regex above defines the three bracket expressions:<br>
 
-`[a-z0-9_\.-]`: includes lowercase characters in the range a-z, numbers from 0-9, an underscore, a period, and a hyphen as matchable characters.
-`[\da-z\.-]`: includes all digits `\d`, lowercase characters from a-z, a period, and a hyphen as matchable characters.
-`[a-z\.]`: includes lowercase characters in the range a-z and a period as matchable characters.
+`[a-z0-9_\.-]`: includes lowercase characters in the range a-z, numbers from 0-9, an underscore, a period, and a hyphen as matchable characters.<br>
+`[\da-z\.-]`: includes all digits `\d`, lowercase characters from a-z, a period, and a hyphen as matchable characters.<br>
+`[a-z\.]`: includes lowercase characters in the range a-z and a period as matchable characters.<br>
 
 ### Greedy and Lazy Match
 
@@ -118,26 +118,27 @@ The regex above describes the first two captured groups `([a-z0-9_\.-]+)` and `(
 
 ### Boundaries
 
-Boundaries assert character match position, much as anchors do. Unlike anchors, the assert what characters can be matched to the left and right of the current position (i.e., bookends of the matching character string). Although not used in the regex string define above, the are represented as follows:
+Boundaries assert character match position, much as anchors do. Unlike anchors, the assert what characters can be matched to the left and right of the current position (i.e., bookends of the matching character string).<br>Although not used in the regex string define above, the are represented as follows:<br>
 
-`\b` denotes instances where the characters matched will have a word boundary.
-`\B` denotes all positions were `\b` doesn't match
+`\b` denotes instances where the characters matched will have a word boundary.<br>
+`\B` denotes all positions where `\b` doesn't match.<br>
 
 ### Back-references
 
-A back-reference `\<number indicating capturing group>` allows the reference of the specified capturing group previously matched. Back-refernces are not made in the above regex.
+A back-reference `\<number indicating capturing group>` allows the reference of the specified capturing group previously matched.<br>
+Back-refernces are not made in the above regex.
 
 ### Look-ahead and Look-behind
 
-Although not employed in the discussed regex,
+Although not employed in the discussed regex:<br>
 
-`(?=)` Lookahead asserts what comes before the defined string.
-`(?<=)` Lookbehind asserts what comes after the defined string.
+`(?=)` Lookahead asserts what comes before the defined string.<br>
+`(?<=)` Lookbehind asserts what comes after the defined string.<br>
 
 ## Author
 
 This tutorial authored by Kat Redondo.
 
-(as ru3yKat on GitHub)[https://github.com/RU3YKat]
+[as ru3yKat on GitHub](https://github.com/RU3YKat)
 
-This regex tutorial references information provided by rexegg.com and the Mozilla Developer Web Technology articles on regex found at (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions).
+This regex tutorial references information provided by rexegg.com and the Mozilla Developer Web Technology articles on regex found at: (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions).
