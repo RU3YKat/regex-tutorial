@@ -93,3 +93,50 @@ Although they are not applied in the email regex, forward slashes `/`, denote a 
 `/s` or dotAll flag, where all Unicode indicating any line terminator is accepted.
 `/u` or Unicode flag, accepting any Unicode code point escapes as such.
 `/y` or sticky flag, where only the matched index is the first incidence. This flag takes precedence over any global designations.
+
+### Grouping and Capturing
+
+Defined by the use of parentheses `()`, which contain a group that is to be matched and remembered, or captured.
+
+The above regex captures three groups, the first `([a-z0-9_\.-]+)` represents the matchable username characters, the second `([\da-z\.-]+)` represents the matchable domain characters, the third `([a-z\.]{2,6})` represents the matchable domain extension characters.
+
+### Bracket Expressions
+
+Specifications for characters denoted within brackets, `[]` are defined for a single character selection.
+The regex above defines the three bracket expressions:
+
+`[a-z0-9_\.-]`: includes lowercase characters in the range a-z, numbers from 0-9, an underscore, a period, and a hyphen as matchable characters.
+`[\da-z\.-]`: includes all digits `\d`, lowercase characters from a-z, a period, and a hyphen as matchable characters.
+`[a-z\.]`: includes lowercase characters in the range a-z and a period as matchable characters.
+
+### Greedy and Lazy Match
+
+These quantifiers specify how much, or how many times, to capture the speficied match. A greedy match, identified by the quantifiers `+` and `{}`, makes as many matches as possible. A lazy match, identified by the quantifiers `+?` and `{}?`, make the shortest match possible.
+
+The regex above describes the first two captured groups `([a-z0-9_\.-]+)` and `([\da-z\.-]+)`, to expand the match as far as possible. The third captured group, `([a-z\.]{2,6})`, matches a delimited group of 2 to 6 characters only.
+
+### Boundaries
+
+Boundaries assert character match position, much as anchors do. Unlike anchors, the assert what characters can be matched to the left and right of the current position (i.e., bookends of the matching character string). Although not used in the regex string define above, the are represented as follows:
+
+`\b` denotes instances where the characters matched will have a word boundary.
+`\B` denotes all positions were `\b` doesn't match
+
+### Back-references
+
+A back-reference `\<number indicating capturing group>` allows the reference of the specified capturing group previously matched. Back-refernces are not made in the above regex.
+
+### Look-ahead and Look-behind
+
+Although not employed in the discussed regex,
+
+`(?=)` Lookahead asserts what comes before the defined string.
+`(?<=)` Lookbehind asserts what comes after the defined string.
+
+## Author
+
+This tutorial authored by Kat Redondo.
+
+(as ru3yKat on GitHub)[https://github.com/RU3YKat]
+
+This regex tutorial references information provided by rexegg.com and the Mozilla Developer Web Technology articles on regex found at (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions).
